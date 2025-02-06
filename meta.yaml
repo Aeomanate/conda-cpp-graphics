@@ -1,0 +1,31 @@
+package:
+  name: conda-cpp-graphics
+  version: "1.0"
+
+source:
+  git_url: https://github.com/Aeomanate/conda-cpp-graphics
+  git_rev: master
+
+requirements:
+  build:
+    - cmake
+    - gcc
+    - boost
+    - gtest
+    - rapidjson
+    - sfml
+
+  run:
+    - boost
+    - gtest
+    - rapidjson
+    - sfml
+
+test:
+  commands:
+    - ./cpp-graphics-test
+
+about:
+  license: MIT
+  summary: "A C++ graphics program using SFML, Boost, Gtest, and RapidJSON"
+

@@ -55,13 +55,9 @@ TEST(SettingsTest, ReadSettings) {
 // Main function to draw the text on screen
 int main() {
     Config config = readSettings("settings.json");
-
-    // Create the window
     sf::RenderWindow window(sf::VideoMode(config.width, config.height), "SFML Graphics");
-
-    // Create the text
     sf::Font font;
-    if (!font.loadFromFile("Lato-Black.ttf")) {  // Make sure you have this font file or adjust the path
+    if (!font.loadFromFile("Lato-Black.ttf")) { 
         std::cerr << "Failed to load font!" << std::endl;
         return -1;
     }

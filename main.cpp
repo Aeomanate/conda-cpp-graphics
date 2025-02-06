@@ -1,3 +1,4 @@
+#include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <boost/filesystem.hpp>
 #include <rapidjson/document.h>
@@ -60,7 +61,7 @@ int main() {
 
     // Create the text
     sf::Font font;
-    if (!font.loadFromFile("arial.ttf")) {  // Make sure you have this font file or adjust the path
+    if (!font.loadFromFile("Lato-Black.ttf")) {  // Make sure you have this font file or adjust the path
         std::cerr << "Failed to load font!" << std::endl;
         return -1;
     }

@@ -2,9 +2,11 @@ cmake_minimum_required(VERSION 3.15)
 project(cpp-graphics)
 
 set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+set(CMAKE_BUILD_RPATH $CONDA_PREFIX/lib)
 
-find_package(Boost REQUIRED)
-find_package(SFML REQUIRED)
+find_package(Boost REQUIRED COMPONENTS filesystem system)
+find_package(SFML REQUIRED system window graphics)
 find_package(GTest REQUIRED)
 find_package(RapidJSON REQUIRED)
 
